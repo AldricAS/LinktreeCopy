@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: black;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 50px auto;
+            background: #1e1e1e;
+            padding: 20px;
+            width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px white;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: block;
+            background: #222;
+            color: white;
+            padding: 12px;
+            margin: 10px auto;
+            width: 90%;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            border: 2px solid white;
+            box-shadow: 2px 2px 5px white;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px white;
+            color: white;
+            border: 2px solid white;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+        }
+        h2 {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://yt3.googleusercontent.com/FSshIME11NXQCjAxI7YjZtjlG4a_NvdvpsBvGvSq3P0iQbTAhZf9245VKXKDEnh0cL7NypaamQ=s160-c-k-c0x00ffffff-no-rj" alt="Profile" class="profile-img">
+        <a href="#" class="btn" onclick="openModal('aboutMe')">About Me</a>
+        <a href="#" class="btn" onclick="openModal('gameList')">Game</a>
+        <a href="https://instagram.com" class="btn">Instagram</a>
+        <a href="https://www.tiktok.com/@aldricadelardsaputra1?lang=id-ID" class="btn">TikTok</a>
+        <a href="https://m.youtube.com/@AldricOP" class="btn">YouTube</a>
+    </div>
+
+    <div id="aboutMe" class="modal">
+        <span class="close-btn" onclick="closeModal('aboutMe')">&times;</span>
+        <h2>About Me</h2>
+        <p><strong>Name:</strong> Aldric</p>
+        <p><strong>Birthday:</strong> 23 June</p>
+    </div>
+
+    <div id="gameList" class="modal">
+        <span class="close-btn" onclick="closeModal('gameList')">&times;</span>
+        <h2>Game List</h2>
+        <ol>
+            <li>Garena Free Fire/Free Fire Max</li>
+            <li>Mobile Legends: Bang Bang</li>
+            <li>BombSquad</li>
+            <li>Frag Shooter</li>
+            <li>Dll</li>
+        </ol>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+  </html>
+  
